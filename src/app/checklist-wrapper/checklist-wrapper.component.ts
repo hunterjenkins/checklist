@@ -40,6 +40,19 @@ export class ChecklistWrapperComponent {
   nestedTreeControl: NestedTreeControl<SectionNode>;
   nestedDataSource: MatTreeNestedDataSource<SectionNode>;
   dataChange: BehaviorSubject<SectionNode[]> = new BehaviorSubject<SectionNode[]>([]);
+  modifyRights: string[];
+  title: string;
+  workflow: string[];
+  description: string;
+  assignee: string[];
+  dueDate: string;
+  qcCheck: string;
+  lifecycle: string[]
+  milestone: string[];
+  country: string[];
+  siteNumber: string[];
+  patientNumber: string[];
+  comments: string;
 
   constructor() {
     this.nestedTreeControl = new NestedTreeControl<SectionNode>(this.getSectionChildren);
@@ -66,7 +79,7 @@ export class ChecklistWrapperComponent {
                 childrenLineItems:[
                   {
                     icon: 'assignment',
-                    modifyRights: ['a'],
+                    modifyRights: ['Hunter Rights'],
                     title: 'test',
                     workflow: [''],
                     description: '',
@@ -87,7 +100,7 @@ export class ChecklistWrapperComponent {
             childrenLineItems: [
               {
                 icon: 'assignment',
-                modifyRights: ['a'],
+                modifyRights: ['Dan Rights', 'Brandon Rights', 'Phil Rights'],
                 title: 'test',
                 workflow: [''],
                 description: '',
@@ -1150,6 +1163,18 @@ export class ChecklistWrapperComponent {
 
   public displayLineItem( node: LineItemNode){
     console.log(node);
+    this.title = node.title;
+    this.modifyRights = node.modifyRights;
+    this.workflow = node.workflow;
+    this.description = node.description;
+    this.assignee = node.assignee;
+    this.dueDate = node.dueDate;
+    this.qcCheck = node.qcCheck;
+    this.milestone = node.milestone;
+    this.country = node.country;
+    this.siteNumber = node.siteNumber;
+    this.patientNumber = node.patientNumber;
+    this.comments = node.comments;
   }
 
 
