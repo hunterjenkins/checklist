@@ -73,22 +73,219 @@
       </mat-tree>
     </div>
 
-    <div class="col-md-6" style="background-color: white;">
+    <div class="col-md-6" >
       <!-- {{selectedNode.item}} -->
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            TMF Rights
+
+      <div *ngIf="this.selectedLineItem != null">
+        <div class="container">
+
+          <mat-card class="myCard">
+          <div class="row">
+            <div class="col-md-12">
+              <h3 class="customLineItemHeader">TMF Rights</h3>
+            </div>
           </div>
+          <div class="row">
+            <div class="col-md-2 customLineItemLabel">
+              Modify Rights
+            </div>
+            <div class="col-md-10">
+              <mat-form-field style="width: 100%;">
+                <mat-select>
+                  <mat-option *ngFor="let right of this.modifyRights" [value]="this.modifyRights[0]">
+                    {{right}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+          </div>
+</mat-card>
+          <div style="height: 50px;"> </div>
+
+
+<mat-card class="myCard">
+          <div class="row">
+            <div class="col-md-12">
+              <h3 class="customLineItemHeader">Details</h3>
+
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-2 customLineItemLabel">
+              Title
+            </div>
+            <div class="col-md-4">
+              <mat-form-field style="width: 100%;">
+                <textarea matInput [value]="this.title"></textarea>
+              </mat-form-field>
+            </div>
+            <div class="col-md-2 customLineItemLabel">
+              workflow
+            </div>
+            <div class="col-md-4">
+              <mat-form-field style="width: 100%;">
+                <mat-select>
+                  <mat-option *ngFor="let workflow of this.workflow" [value]="this.workflow[0]">
+                    {{workflow}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-md-2 customLineItemLabel">
+              Description
+            </div>
+            <div class="col-md-10">
+              <mat-form-field style="width: 100%;">
+                <textarea matInput [value]="this.description"></textarea>
+              </mat-form-field>
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-md-2 customLineItemLabel">
+              Assignee
+            </div>
+            <div class="col-md-4">
+              <mat-form-field style="width: 100%;">
+                <mat-select>
+                  <mat-option *ngFor="let assign of this.assignee" [value]="this.assignee[0]">
+                    {{assign}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+            <div class="col-md-2 customLineItemLabel">
+              Due Date
+            </div>
+            <div class="col-md-4">
+              <mat-form-field style="width: 100%;">
+                <!-- <mat-label>Choose a date</mat-label> -->
+                <input matInput [matDatepicker]="picker">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-md-2 customLineItemLabel">
+              QC Check
+            </div>
+            <div class="col-md-4">
+              <mat-form-field style="width: 100%;">
+                <mat-select>
+                  <mat-option *ngFor="let qc of this.qcCheck" [value]="this.assignee[0]">
+                    {{qc}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+            <div class="col-md-2 customLineItemLabel">
+              lifecycle
+            </div>
+            <div class="col-md-4">
+              <mat-form-field style="width: 100%;">
+                <mat-select>
+                  <mat-option *ngFor="let lc of this.lifecycle" [value]="this.assignee[0]">
+                    {{lc}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+          </div>
+</mat-card>
+
+<div style="height: 50px;"> </div>
+
+<mat-card class="myCard">
+          <div class="row">
+            <div class="col-md-6 customLineItemHeader">
+              Metadata
+            </div>
+            <div class="col-md-6 customLineItemHeader">
+            Notes
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="row">
+                <div class="col-md-4 customLineItemLabel">
+                  Milestone
+                </div>
+                <div class="col-md-8" >
+                  <mat-form-field style="width: 100%;">
+                    <mat-select>
+                      <mat-option *ngFor="let ms of this.milestone" [value]="this.assignee[0]">
+                        {{ms}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4 customLineItemLabel">
+                  Country
+                </div>
+                <div class="col-md-8">
+                  <mat-form-field style="width: 100%;">
+                    <mat-select>
+                      <mat-option *ngFor="let c of this.country" [value]="this.assignee[0]">
+                        {{c}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4 customLineItemLabel">
+                  Site #
+                </div>
+                <div class="col-md-8">
+                  <mat-form-field style="width: 100%;">
+                    <mat-select>
+                      <mat-option *ngFor="let sn of this.siteNumber" [value]="this.assignee[0]">
+                        {{sn}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4 customLineItemLabel">
+                  Patient #
+                </div>
+                <div class="col-md-8">
+                  <mat-form-field style="width: 100%;">
+                    <mat-select>
+                      <mat-option *ngFor="let pn of this.patientNumber" [value]="this.assignee[0]">
+                        {{pn}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+
+            </div>
+            <div class="col-md-6">
+              <mat-form-field style="width: 100%; height: 100%">
+                <textarea  rows="12" cols="100" matInput [value]="this.comments"></textarea>
+              </mat-form-field>
+            </div>
+          </div>
+</mat-card>
         </div>
-        <div class="row">
-          <div class="col-md-3">
-            Modify Rights
-          </div>
-          <div class="col-md-9">
-            {{this.modifyRights}}
-          </div>
-        </div>
+
+      </div>
+
+      <div *ngIf="this.selectedLineItem == null">
+        <p> Please select a line item </p>
       </div>
     </div>
 </div>

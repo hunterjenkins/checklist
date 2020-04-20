@@ -12,7 +12,7 @@ export class LineItemNode {
   description: string;
   assignee: string[];
   dueDate: string;
-  qcCheck: string;
+  qcCheck: string[];
   lifecycle: string[]
   milestone: string[];
   country: string[];
@@ -20,6 +20,8 @@ export class LineItemNode {
   patientNumber: string[];
   comments: string;
 }
+
+
 
 export class SectionNode {
   childrenSections: SectionNode[];
@@ -54,6 +56,8 @@ export class ChecklistWrapperComponent {
   patientNumber: string[];
   comments: string;
 
+  selectedLineItem: LineItemNode;
+
   constructor() {
     this.nestedTreeControl = new NestedTreeControl<SectionNode>(this.getSectionChildren);
     this.nestedDataSource = new MatTreeNestedDataSource();
@@ -80,18 +84,18 @@ export class ChecklistWrapperComponent {
                   {
                     icon: 'assignment',
                     modifyRights: ['Hunter Rights'],
-                    title: 'test',
-                    workflow: [''],
-                    description: '',
-                    assignee: [''],
-                    dueDate: '',
-                    qcCheck: '',
-                    lifecycle: [''],
+                    title: 'Hunter',
+                    workflow: ['Workflow1', 'Workflow2'],
+                    description: 'This is a cool thing',
+                    assignee: ['Donald Trump'],
+                    dueDate: 'Yesterday',
+                    qcCheck: ['Passed'],
+                    lifecycle: ['Dead', 'alive'],
                     milestone: [''],
                     country: [''],
                     siteNumber: [''],
                     patientNumber: [''],
-                    comments: ''
+                    comments: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
                   },
                 ],
               }
@@ -101,18 +105,18 @@ export class ChecklistWrapperComponent {
               {
                 icon: 'assignment',
                 modifyRights: ['Dan Rights', 'Brandon Rights', 'Phil Rights'],
-                title: 'test',
-                workflow: [''],
-                description: '',
-                assignee: [''],
-                dueDate: '',
-                qcCheck: '',
-                lifecycle: [''],
+                title: 'Dan',
+                workflow: ['Workflow3', 'Workflow4'],
+                description: 'Joe Exotic is innocent',
+                assignee: ['Jon Beckstrand'],
+                dueDate: 'Today',
+                qcCheck: ['Passed'],
+                lifecycle: ['Alive'],
                 milestone: [''],
                 country: [''],
                 siteNumber: [''],
                 patientNumber: [''],
-                comments: ''
+                comments: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
               },
 
               {
@@ -123,7 +127,7 @@ export class ChecklistWrapperComponent {
                 description: '',
                 assignee: [''],
                 dueDate: '',
-                qcCheck: '',
+                qcCheck: ['Passed'],
                 lifecycle: [''],
                 milestone: [''],
                 country: [''],
@@ -162,7 +166,7 @@ export class ChecklistWrapperComponent {
                     description: '',
                     assignee: [''],
                     dueDate: '',
-                    qcCheck: '',
+                    qcCheck: ['Passed'],
                     lifecycle: [''],
                     milestone: [''],
                     country: [''],
@@ -183,7 +187,7 @@ export class ChecklistWrapperComponent {
                 description: '',
                 assignee: [''],
                 dueDate: '',
-                qcCheck: '',
+                qcCheck: ['Passed'],
                 lifecycle: [''],
                 milestone: [''],
                 country: [''],
@@ -200,7 +204,7 @@ export class ChecklistWrapperComponent {
                 description: '',
                 assignee: [''],
                 dueDate: '',
-                qcCheck: '',
+                qcCheck: ['Passed'],
                 lifecycle: [''],
                 milestone: [''],
                 country: [''],
@@ -239,7 +243,7 @@ export class ChecklistWrapperComponent {
                     description: '',
                     assignee: [''],
                     dueDate: '',
-                    qcCheck: '',
+                    qcCheck: ['Passed'],
                     lifecycle: [''],
                     milestone: [''],
                     country: [''],
@@ -260,7 +264,7 @@ export class ChecklistWrapperComponent {
                 description: '',
                 assignee: [''],
                 dueDate: '',
-                qcCheck: '',
+                qcCheck: ['Passed'],
                 lifecycle: [''],
                 milestone: [''],
                 country: [''],
@@ -277,7 +281,7 @@ export class ChecklistWrapperComponent {
                 description: '',
                 assignee: [''],
                 dueDate: '',
-                qcCheck: '',
+                qcCheck: ['Passed'],
                 lifecycle: [''],
                 milestone: [''],
                 country: [''],
@@ -316,7 +320,7 @@ export class ChecklistWrapperComponent {
                     description: '',
                     assignee: [''],
                     dueDate: '',
-                    qcCheck: '',
+                    qcCheck: ['Passed'],
                     lifecycle: [''],
                     milestone: [''],
                     country: [''],
@@ -337,7 +341,7 @@ export class ChecklistWrapperComponent {
                 description: '',
                 assignee: [''],
                 dueDate: '',
-                qcCheck: '',
+                qcCheck: ['Passed'],
                 lifecycle: [''],
                 milestone: [''],
                 country: [''],
@@ -354,7 +358,7 @@ export class ChecklistWrapperComponent {
                 description: '',
                 assignee: [''],
                 dueDate: '',
-                qcCheck: '',
+                qcCheck: ['Passed'],
                 lifecycle: [''],
                 milestone: [''],
                 country: [''],
@@ -393,7 +397,7 @@ export class ChecklistWrapperComponent {
                     description: '',
                     assignee: [''],
                     dueDate: '',
-                    qcCheck: '',
+                    qcCheck: ['Passed'],
                     lifecycle: [''],
                     milestone: [''],
                     country: [''],
@@ -414,7 +418,7 @@ export class ChecklistWrapperComponent {
                 description: '',
                 assignee: [''],
                 dueDate: '',
-                qcCheck: '',
+                qcCheck: ['Passed'],
                 lifecycle: [''],
                 milestone: [''],
                 country: [''],
@@ -431,7 +435,7 @@ export class ChecklistWrapperComponent {
                 description: '',
                 assignee: [''],
                 dueDate: '',
-                qcCheck: '',
+                qcCheck: ['Passed'],
                 lifecycle: [''],
                 milestone: [''],
                 country: [''],
@@ -470,7 +474,7 @@ export class ChecklistWrapperComponent {
                     description: '',
                     assignee: [''],
                     dueDate: '',
-                    qcCheck: '',
+                    qcCheck: ['Passed'],
                     lifecycle: [''],
                     milestone: [''],
                     country: [''],
@@ -491,7 +495,7 @@ export class ChecklistWrapperComponent {
                 description: '',
                 assignee: [''],
                 dueDate: '',
-                qcCheck: '',
+                qcCheck: ['Passed'],
                 lifecycle: [''],
                 milestone: [''],
                 country: [''],
@@ -508,7 +512,7 @@ export class ChecklistWrapperComponent {
                 description: '',
                 assignee: [''],
                 dueDate: '',
-                qcCheck: '',
+                qcCheck: ['Passed'],
                 lifecycle: [''],
                 milestone: [''],
                 country: [''],
@@ -547,7 +551,7 @@ export class ChecklistWrapperComponent {
                     description: '',
                     assignee: [''],
                     dueDate: '',
-                    qcCheck: '',
+                    qcCheck: ['Passed'],
                     lifecycle: [''],
                     milestone: [''],
                     country: [''],
@@ -568,7 +572,7 @@ export class ChecklistWrapperComponent {
                 description: '',
                 assignee: [''],
                 dueDate: '',
-                qcCheck: '',
+                qcCheck: ['Passed'],
                 lifecycle: [''],
                 milestone: [''],
                 country: [''],
@@ -585,7 +589,7 @@ export class ChecklistWrapperComponent {
                 description: '',
                 assignee: [''],
                 dueDate: '',
-                qcCheck: '',
+                qcCheck: ['Passed'],
                 lifecycle: [''],
                 milestone: [''],
                 country: [''],
@@ -624,7 +628,7 @@ export class ChecklistWrapperComponent {
                     description: '',
                     assignee: [''],
                     dueDate: '',
-                    qcCheck: '',
+                    qcCheck: ['Passed'],
                     lifecycle: [''],
                     milestone: [''],
                     country: [''],
@@ -645,7 +649,7 @@ export class ChecklistWrapperComponent {
                 description: '',
                 assignee: [''],
                 dueDate: '',
-                qcCheck: '',
+                qcCheck: ['Passed'],
                 lifecycle: [''],
                 milestone: [''],
                 country: [''],
@@ -662,7 +666,7 @@ export class ChecklistWrapperComponent {
                 description: '',
                 assignee: [''],
                 dueDate: '',
-                qcCheck: '',
+                qcCheck: ['Passed'],
                 lifecycle: [''],
                 milestone: [''],
                 country: [''],
@@ -700,7 +704,7 @@ export class ChecklistWrapperComponent {
                     description: '',
                     assignee: [''],
                     dueDate: '',
-                    qcCheck: '',
+                    qcCheck: ['Passed'],
                     lifecycle: [''],
                     milestone: [''],
                     country: [''],
@@ -721,7 +725,7 @@ export class ChecklistWrapperComponent {
                 description: '',
                 assignee: [''],
                 dueDate: '',
-                qcCheck: '',
+                qcCheck: ['Passed'],
                 lifecycle: [''],
                 milestone: [''],
                 country: [''],
@@ -738,7 +742,7 @@ export class ChecklistWrapperComponent {
                 description: '',
                 assignee: [''],
                 dueDate: '',
-                qcCheck: '',
+                qcCheck: ['Passed'],
                 lifecycle: [''],
                 milestone: [''],
                 country: [''],
@@ -777,7 +781,7 @@ export class ChecklistWrapperComponent {
                     description: '',
                     assignee: [''],
                     dueDate: '',
-                    qcCheck: '',
+                    qcCheck: ['Passed'],
                     lifecycle: [''],
                     milestone: [''],
                     country: [''],
@@ -798,7 +802,7 @@ export class ChecklistWrapperComponent {
                 description: '',
                 assignee: [''],
                 dueDate: '',
-                qcCheck: '',
+                qcCheck: ['Passed'],
                 lifecycle: [''],
                 milestone: [''],
                 country: [''],
@@ -815,7 +819,7 @@ export class ChecklistWrapperComponent {
                 description: '',
                 assignee: [''],
                 dueDate: '',
-                qcCheck: '',
+                qcCheck: ['Passed'],
                 lifecycle: [''],
                 milestone: [''],
                 country: [''],
@@ -854,7 +858,7 @@ export class ChecklistWrapperComponent {
                     description: '',
                     assignee: [''],
                     dueDate: '',
-                    qcCheck: '',
+                    qcCheck: ['Passed'],
                     lifecycle: [''],
                     milestone: [''],
                     country: [''],
@@ -875,7 +879,7 @@ export class ChecklistWrapperComponent {
                 description: '',
                 assignee: [''],
                 dueDate: '',
-                qcCheck: '',
+                qcCheck: ['Passed'],
                 lifecycle: [''],
                 milestone: [''],
                 country: [''],
@@ -892,7 +896,7 @@ export class ChecklistWrapperComponent {
                 description: '',
                 assignee: [''],
                 dueDate: '',
-                qcCheck: '',
+                qcCheck: ['Passed'],
                 lifecycle: [''],
                 milestone: [''],
                 country: [''],
@@ -931,7 +935,7 @@ export class ChecklistWrapperComponent {
                     description: '',
                     assignee: [''],
                     dueDate: '',
-                    qcCheck: '',
+                    qcCheck: ['Passed'],
                     lifecycle: [''],
                     milestone: [''],
                     country: [''],
@@ -952,7 +956,7 @@ export class ChecklistWrapperComponent {
                 description: '',
                 assignee: [''],
                 dueDate: '',
-                qcCheck: '',
+                qcCheck: ['Passed'],
                 lifecycle: [''],
                 milestone: [''],
                 country: [''],
@@ -969,7 +973,7 @@ export class ChecklistWrapperComponent {
                 description: '',
                 assignee: [''],
                 dueDate: '',
-                qcCheck: '',
+                qcCheck: ['Passed'],
                 lifecycle: [''],
                 milestone: [''],
                 country: [''],
@@ -1008,7 +1012,7 @@ export class ChecklistWrapperComponent {
                     description: '',
                     assignee: [''],
                     dueDate: '',
-                    qcCheck: '',
+                    qcCheck: ['Passed'],
                     lifecycle: [''],
                     milestone: [''],
                     country: [''],
@@ -1029,7 +1033,7 @@ export class ChecklistWrapperComponent {
                 description: '',
                 assignee: [''],
                 dueDate: '',
-                qcCheck: '',
+                qcCheck: ['Passed'],
                 lifecycle: [''],
                 milestone: [''],
                 country: [''],
@@ -1046,7 +1050,7 @@ export class ChecklistWrapperComponent {
                 description: '',
                 assignee: [''],
                 dueDate: '',
-                qcCheck: '',
+                qcCheck: ['Passed'],
                 lifecycle: [''],
                 milestone: [''],
                 country: [''],
@@ -1085,7 +1089,7 @@ export class ChecklistWrapperComponent {
                     description: '',
                     assignee: [''],
                     dueDate: '',
-                    qcCheck: '',
+                    qcCheck: ['Passed'],
                     lifecycle: [''],
                     milestone: [''],
                     country: [''],
@@ -1106,7 +1110,7 @@ export class ChecklistWrapperComponent {
                 description: '',
                 assignee: [''],
                 dueDate: '',
-                qcCheck: '',
+                qcCheck: ['Passed'],
                 lifecycle: [''],
                 milestone: [''],
                 country: [''],
@@ -1123,7 +1127,7 @@ export class ChecklistWrapperComponent {
                 description: '',
                 assignee: [''],
                 dueDate: '',
-                qcCheck: '',
+                qcCheck: ['Passed'],
                 lifecycle: [''],
                 milestone: [''],
                 country: [''],
@@ -1139,6 +1143,9 @@ export class ChecklistWrapperComponent {
 
 
     ]);
+
+
+
   }
 
 
@@ -1163,6 +1170,9 @@ export class ChecklistWrapperComponent {
 
   public displayLineItem( node: LineItemNode){
     console.log(node);
+
+    this.selectedLineItem = node;
+
     this.title = node.title;
     this.modifyRights = node.modifyRights;
     this.workflow = node.workflow;
