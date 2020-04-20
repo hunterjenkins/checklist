@@ -48,7 +48,7 @@ export class ChecklistWrapperComponent {
   description: string;
   assignee: string[];
   dueDate: string;
-  qcCheck: string;
+  qcCheck: string[];
   lifecycle: string[]
   milestone: string[];
   country: string[];
@@ -91,10 +91,10 @@ export class ChecklistWrapperComponent {
                     dueDate: 'Yesterday',
                     qcCheck: ['Passed'],
                     lifecycle: ['Dead', 'alive'],
-                    milestone: [''],
-                    country: [''],
-                    siteNumber: [''],
-                    patientNumber: [''],
+                    milestone: ['Study Start Up'],
+                    country: ['USA'],
+                    siteNumber: ['1', '2', '3'],
+                    patientNumber: ['111', '112', '113'],
                     comments: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
                   },
                 ],
@@ -108,14 +108,14 @@ export class ChecklistWrapperComponent {
                 title: 'Dan',
                 workflow: ['Workflow3', 'Workflow4'],
                 description: 'Joe Exotic is innocent',
-                assignee: ['Jon Beckstrand'],
+                assignee: ['Jon Beckstrand', 'Alicia Garcia'],
                 dueDate: 'Today',
                 qcCheck: ['Passed'],
-                lifecycle: ['Alive'],
-                milestone: [''],
-                country: [''],
-                siteNumber: [''],
-                patientNumber: [''],
+                lifecycle: ['Dead', 'alive'],
+                milestone: ['Study Start Up'],
+                country: ['USA', 'Canada'],
+                siteNumber: ['1', '2', '3'],
+                patientNumber: ['111', '112', '113'],
                 comments: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
               },
 
@@ -123,8 +123,8 @@ export class ChecklistWrapperComponent {
                 icon: 'assignment',
                 modifyRights: ['a'],
                 title: 'test2',
-                workflow: [''],
-                description: '',
+                workflow: ['Workflow1', 'Workflow2'],
+                description: 'This is a cool thing',
                 assignee: [''],
                 dueDate: '',
                 qcCheck: ['Passed'],
@@ -133,7 +133,7 @@ export class ChecklistWrapperComponent {
                 country: [''],
                 siteNumber: [''],
                 patientNumber: [''],
-                comments: ''
+                comments: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
               }
             ]
           }
@@ -162,17 +162,17 @@ export class ChecklistWrapperComponent {
                     icon: 'assignment',
                     modifyRights: ['a'],
                     title: 'test',
-                    workflow: [''],
-                    description: '',
-                    assignee: [''],
+                    workflow: ['Workflow1', 'Workflow2'],
+                    description: 'This is a cool thing',
+                    assignee: ['Tiger King', 'Ronald McDonald'],
                     dueDate: '',
                     qcCheck: ['Passed'],
-                    lifecycle: [''],
-                    milestone: [''],
-                    country: [''],
-                    siteNumber: [''],
-                    patientNumber: [''],
-                    comments: ''
+                    lifecycle: ['Dead', 'alive'],
+                    milestone: ['Study Start Up'],
+                    country: ['USA'],
+                    siteNumber: ['1', '2', '3'],
+                    patientNumber: ['111', '112', '113'],
+                    comments: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
                   },
                 ],
               }
@@ -185,7 +185,7 @@ export class ChecklistWrapperComponent {
                 title: 'test',
                 workflow: [''],
                 description: '',
-                assignee: [''],
+                assignee: ['Dwight Shrute', 'Gabe Lewis'],
                 dueDate: '',
                 qcCheck: ['Passed'],
                 lifecycle: [''],
@@ -193,24 +193,24 @@ export class ChecklistWrapperComponent {
                 country: [''],
                 siteNumber: [''],
                 patientNumber: [''],
-                comments: ''
+                comments: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
               },
 
               {
                 icon: 'assignment',
                 modifyRights: ['a'],
                 title: 'test2',
-                workflow: [''],
-                description: '',
-                assignee: [''],
+                workflow: ['Workflow1', 'Workflow2'],
+                description: 'This is a cool thing',
+                assignee: ['Jon Beckstrand', 'Alicia Garcia'],
                 dueDate: '',
                 qcCheck: ['Passed'],
-                lifecycle: [''],
-                milestone: [''],
-                country: [''],
-                siteNumber: [''],
-                patientNumber: [''],
-                comments: ''
+                lifecycle: ['Dead', 'alive'],
+                milestone: ['Study Start Up'],
+                country: ['USA'],
+                siteNumber: ['1', '2', '3'],
+                patientNumber: ['111', '112', '113'],
+                comments: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
               }
             ]
           }
@@ -237,11 +237,11 @@ export class ChecklistWrapperComponent {
                 childrenLineItems:[
                   {
                     icon: 'assignment',
-                    modifyRights: ['a'],
+                    modifyRights: ['a', 'b', 'c'],
                     title: 'test',
-                    workflow: [''],
-                    description: '',
-                    assignee: [''],
+                    workflow: ['Workflow1', 'Workflow2'],
+                    description: 'This is a cool thing',
+                    assignee: ['Tiger King', 'Ronald McDonald'],
                     dueDate: '',
                     qcCheck: ['Passed'],
                     lifecycle: [''],
@@ -249,7 +249,7 @@ export class ChecklistWrapperComponent {
                     country: [''],
                     siteNumber: [''],
                     patientNumber: [''],
-                    comments: ''
+                    comments: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
                   },
                 ],
               }
@@ -258,7 +258,7 @@ export class ChecklistWrapperComponent {
             childrenLineItems: [
               {
                 icon: 'assignment',
-                modifyRights: ['a'],
+                modifyRights: ['a', 'b', 'c'],
                 title: 'test',
                 workflow: [''],
                 description: '',
@@ -270,24 +270,24 @@ export class ChecklistWrapperComponent {
                 country: [''],
                 siteNumber: [''],
                 patientNumber: [''],
-                comments: ''
+                comments: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
               },
 
               {
                 icon: 'assignment',
                 modifyRights: ['a'],
                 title: 'test2',
-                workflow: [''],
-                description: '',
+                workflow: ['Workflow1', 'Workflow2'],
+                description: 'This is a cool thing',
                 assignee: [''],
                 dueDate: '',
                 qcCheck: ['Passed'],
-                lifecycle: [''],
-                milestone: [''],
-                country: [''],
-                siteNumber: [''],
-                patientNumber: [''],
-                comments: ''
+                lifecycle: ['Dead', 'alive'],
+                milestone: ['Study Start Up'],
+                country: ['USA'],
+                siteNumber: ['1', '2', '3'],
+                patientNumber: ['111', '112', '113'],
+                comments: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
               }
             ]
           }
@@ -314,10 +314,10 @@ export class ChecklistWrapperComponent {
                 childrenLineItems:[
                   {
                     icon: 'assignment',
-                    modifyRights: ['a'],
+                    modifyRights: ['a', 'b', 'c'],
                     title: 'test',
-                    workflow: [''],
-                    description: '',
+                    workflow: ['Workflow1', 'Workflow2'],
+                    description: 'This is a cool thing',
                     assignee: [''],
                     dueDate: '',
                     qcCheck: ['Passed'],
@@ -326,7 +326,7 @@ export class ChecklistWrapperComponent {
                     country: [''],
                     siteNumber: [''],
                     patientNumber: [''],
-                    comments: ''
+                    comments: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
                   },
                 ],
               }
@@ -337,17 +337,17 @@ export class ChecklistWrapperComponent {
                 icon: 'assignment',
                 modifyRights: ['a'],
                 title: 'test',
-                workflow: [''],
-                description: '',
-                assignee: [''],
+                workflow: ['Workflow1', 'Workflow2'],
+                description: 'This is a cool thing',
+                assignee: ['Tiger King', 'Ronald McDonald'],
                 dueDate: '',
                 qcCheck: ['Passed'],
-                lifecycle: [''],
-                milestone: [''],
-                country: [''],
-                siteNumber: [''],
-                patientNumber: [''],
-                comments: ''
+                lifecycle: ['Dead', 'alive'],
+                milestone: ['Study Start Up'],
+                country: ['USA'],
+                siteNumber: ['1', '2', '3'],
+                patientNumber: ['111', '112', '113'],
+                comments: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
               },
 
               {
@@ -356,7 +356,7 @@ export class ChecklistWrapperComponent {
                 title: 'test2',
                 workflow: [''],
                 description: '',
-                assignee: [''],
+                assignee: ['Michael Scott', 'Dwight Shrute'],
                 dueDate: '',
                 qcCheck: ['Passed'],
                 lifecycle: [''],
@@ -364,7 +364,7 @@ export class ChecklistWrapperComponent {
                 country: [''],
                 siteNumber: [''],
                 patientNumber: [''],
-                comments: ''
+                comments: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
               }
             ]
           }
@@ -391,10 +391,10 @@ export class ChecklistWrapperComponent {
                 childrenLineItems:[
                   {
                     icon: 'assignment',
-                    modifyRights: ['a'],
+                    modifyRights: ['a', 'b', 'c'],
                     title: 'test',
-                    workflow: [''],
-                    description: '',
+                    workflow: ['Workflow1', 'Workflow2'],
+                    description: 'This is a cool thing',
                     assignee: [''],
                     dueDate: '',
                     qcCheck: ['Passed'],
@@ -403,7 +403,7 @@ export class ChecklistWrapperComponent {
                     country: [''],
                     siteNumber: [''],
                     patientNumber: [''],
-                    comments: ''
+                    comments: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
                   },
                 ],
               }
@@ -416,7 +416,7 @@ export class ChecklistWrapperComponent {
                 title: 'test',
                 workflow: [''],
                 description: '',
-                assignee: [''],
+                assignee: ['Michael Scott', 'Dwight Shrute'],
                 dueDate: '',
                 qcCheck: ['Passed'],
                 lifecycle: [''],
@@ -424,12 +424,12 @@ export class ChecklistWrapperComponent {
                 country: [''],
                 siteNumber: [''],
                 patientNumber: [''],
-                comments: ''
+                comments: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
               },
 
               {
                 icon: 'assignment',
-                modifyRights: ['a'],
+                modifyRights: ['a', 'b', 'c'],
                 title: 'test2',
                 workflow: [''],
                 description: '',
@@ -441,7 +441,7 @@ export class ChecklistWrapperComponent {
                 country: [''],
                 siteNumber: [''],
                 patientNumber: [''],
-                comments: ''
+                comments: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
               }
             ]
           }
@@ -472,7 +472,7 @@ export class ChecklistWrapperComponent {
                     title: 'test',
                     workflow: [''],
                     description: '',
-                    assignee: [''],
+                    assignee: ['Tiger King', 'Ronald McDonald'],
                     dueDate: '',
                     qcCheck: ['Passed'],
                     lifecycle: [''],
@@ -480,7 +480,7 @@ export class ChecklistWrapperComponent {
                     country: [''],
                     siteNumber: [''],
                     patientNumber: [''],
-                    comments: ''
+                    comments: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
                   },
                 ],
               }
@@ -489,11 +489,11 @@ export class ChecklistWrapperComponent {
             childrenLineItems: [
               {
                 icon: 'assignment',
-                modifyRights: ['a'],
+                modifyRights: ['a', 'b', 'c'],
                 title: 'test',
                 workflow: [''],
                 description: '',
-                assignee: [''],
+                assignee: ['Michael Scott', 'Dwight Shrute'],
                 dueDate: '',
                 qcCheck: ['Passed'],
                 lifecycle: [''],
@@ -501,7 +501,7 @@ export class ChecklistWrapperComponent {
                 country: [''],
                 siteNumber: [''],
                 patientNumber: [''],
-                comments: ''
+                comments: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
               },
 
               {
@@ -518,7 +518,7 @@ export class ChecklistWrapperComponent {
                 country: [''],
                 siteNumber: [''],
                 patientNumber: [''],
-                comments: ''
+                comments: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
               }
             ]
           }
@@ -545,7 +545,7 @@ export class ChecklistWrapperComponent {
                 childrenLineItems:[
                   {
                     icon: 'assignment',
-                    modifyRights: ['a'],
+                    modifyRights: ['a', 'b', 'c'],
                     title: 'test',
                     workflow: [''],
                     description: '',
@@ -557,7 +557,7 @@ export class ChecklistWrapperComponent {
                     country: [''],
                     siteNumber: [''],
                     patientNumber: [''],
-                    comments: ''
+                    comments: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
                   },
                 ],
               }
@@ -566,11 +566,11 @@ export class ChecklistWrapperComponent {
             childrenLineItems: [
               {
                 icon: 'assignment',
-                modifyRights: ['a'],
+                modifyRights: ['a', 'b', 'c'],
                 title: 'test',
                 workflow: [''],
                 description: '',
-                assignee: [''],
+                assignee: ['Michael Scott', 'Dwight Shrute'],
                 dueDate: '',
                 qcCheck: ['Passed'],
                 lifecycle: [''],
@@ -578,7 +578,7 @@ export class ChecklistWrapperComponent {
                 country: [''],
                 siteNumber: [''],
                 patientNumber: [''],
-                comments: ''
+                comments: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
               },
 
               {
@@ -595,7 +595,7 @@ export class ChecklistWrapperComponent {
                 country: [''],
                 siteNumber: [''],
                 patientNumber: [''],
-                comments: ''
+                comments: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
               }
             ]
           }
@@ -622,11 +622,11 @@ export class ChecklistWrapperComponent {
                 childrenLineItems:[
                   {
                     icon: 'assignment',
-                    modifyRights: ['a'],
+                    modifyRights: ['a', 'b', 'c'],
                     title: 'test',
                     workflow: [''],
                     description: '',
-                    assignee: [''],
+                    assignee: ['Michael Scott', 'Dwight Shrute'],
                     dueDate: '',
                     qcCheck: ['Passed'],
                     lifecycle: [''],
@@ -634,7 +634,7 @@ export class ChecklistWrapperComponent {
                     country: [''],
                     siteNumber: [''],
                     patientNumber: [''],
-                    comments: ''
+                    comments: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
                   },
                 ],
               }
@@ -647,7 +647,7 @@ export class ChecklistWrapperComponent {
                 title: 'test',
                 workflow: [''],
                 description: '',
-                assignee: [''],
+                assignee: ['Michael Scott', 'Dwight Shrute'],
                 dueDate: '',
                 qcCheck: ['Passed'],
                 lifecycle: [''],
@@ -655,7 +655,7 @@ export class ChecklistWrapperComponent {
                 country: [''],
                 siteNumber: [''],
                 patientNumber: [''],
-                comments: ''
+                comments: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
               },
 
               {
@@ -664,7 +664,7 @@ export class ChecklistWrapperComponent {
                 title: 'test2',
                 workflow: [''],
                 description: '',
-                assignee: [''],
+                assignee: ['Tiger King', 'Ronald McDonald'],
                 dueDate: '',
                 qcCheck: ['Passed'],
                 lifecycle: [''],
@@ -672,7 +672,7 @@ export class ChecklistWrapperComponent {
                 country: [''],
                 siteNumber: [''],
                 patientNumber: [''],
-                comments: ''
+                comments: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
               }
             ]
           }
@@ -698,7 +698,7 @@ export class ChecklistWrapperComponent {
                 childrenLineItems:[
                   {
                     icon: 'assignment',
-                    modifyRights: ['a'],
+                    modifyRights: ['a', 'b', 'c'],
                     title: 'test',
                     workflow: [''],
                     description: '',
@@ -710,7 +710,7 @@ export class ChecklistWrapperComponent {
                     country: [''],
                     siteNumber: [''],
                     patientNumber: [''],
-                    comments: ''
+                    comments: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
                   },
                 ],
               }
@@ -731,7 +731,7 @@ export class ChecklistWrapperComponent {
                 country: [''],
                 siteNumber: [''],
                 patientNumber: [''],
-                comments: ''
+                comments: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
               },
 
               {
@@ -740,7 +740,7 @@ export class ChecklistWrapperComponent {
                 title: 'test2',
                 workflow: [''],
                 description: '',
-                assignee: [''],
+                assignee: ['Tiger King', 'Ronald McDonald'],
                 dueDate: '',
                 qcCheck: ['Passed'],
                 lifecycle: [''],
@@ -748,7 +748,7 @@ export class ChecklistWrapperComponent {
                 country: [''],
                 siteNumber: [''],
                 patientNumber: [''],
-                comments: ''
+                comments: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
               }
             ]
           }
@@ -787,7 +787,7 @@ export class ChecklistWrapperComponent {
                     country: [''],
                     siteNumber: [''],
                     patientNumber: [''],
-                    comments: ''
+                    comments: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
                   },
                 ],
               }
@@ -800,7 +800,7 @@ export class ChecklistWrapperComponent {
                 title: 'test',
                 workflow: [''],
                 description: '',
-                assignee: [''],
+                assignee: ['Tiger King', 'Ronald McDonald'],
                 dueDate: '',
                 qcCheck: ['Passed'],
                 lifecycle: [''],
@@ -808,7 +808,7 @@ export class ChecklistWrapperComponent {
                 country: [''],
                 siteNumber: [''],
                 patientNumber: [''],
-                comments: ''
+                comments: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
               },
 
               {
@@ -817,7 +817,7 @@ export class ChecklistWrapperComponent {
                 title: 'test2',
                 workflow: [''],
                 description: '',
-                assignee: [''],
+                assignee: ['Tiger King', 'Ronald McDonald'],
                 dueDate: '',
                 qcCheck: ['Passed'],
                 lifecycle: [''],
@@ -825,7 +825,7 @@ export class ChecklistWrapperComponent {
                 country: [''],
                 siteNumber: [''],
                 patientNumber: [''],
-                comments: ''
+                comments: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
               }
             ]
           }
@@ -856,7 +856,7 @@ export class ChecklistWrapperComponent {
                     title: 'test',
                     workflow: [''],
                     description: '',
-                    assignee: [''],
+                    assignee: ['Tiger King', 'Ronald McDonald'],
                     dueDate: '',
                     qcCheck: ['Passed'],
                     lifecycle: [''],
@@ -864,7 +864,7 @@ export class ChecklistWrapperComponent {
                     country: [''],
                     siteNumber: [''],
                     patientNumber: [''],
-                    comments: ''
+                    comments: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
                   },
                 ],
               }
@@ -877,7 +877,7 @@ export class ChecklistWrapperComponent {
                 title: 'test',
                 workflow: [''],
                 description: '',
-                assignee: [''],
+                assignee: ['Donald Trump', 'Mike Pence'],
                 dueDate: '',
                 qcCheck: ['Passed'],
                 lifecycle: [''],
@@ -885,7 +885,7 @@ export class ChecklistWrapperComponent {
                 country: [''],
                 siteNumber: [''],
                 patientNumber: [''],
-                comments: ''
+                comments: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
               },
 
               {
@@ -902,7 +902,7 @@ export class ChecklistWrapperComponent {
                 country: [''],
                 siteNumber: [''],
                 patientNumber: [''],
-                comments: ''
+                comments: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
               }
             ]
           }
@@ -941,7 +941,7 @@ export class ChecklistWrapperComponent {
                     country: [''],
                     siteNumber: [''],
                     patientNumber: [''],
-                    comments: ''
+                    comments: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
                   },
                 ],
               }
@@ -954,7 +954,7 @@ export class ChecklistWrapperComponent {
                 title: 'test',
                 workflow: [''],
                 description: '',
-                assignee: [''],
+                assignee: ['Donald Trump', 'Mike Pence'],
                 dueDate: '',
                 qcCheck: ['Passed'],
                 lifecycle: [''],
@@ -971,7 +971,7 @@ export class ChecklistWrapperComponent {
                 title: 'test2',
                 workflow: [''],
                 description: '',
-                assignee: [''],
+                assignee: ['Donald Trump', 'Mike Pence'],
                 dueDate: '',
                 qcCheck: ['Passed'],
                 lifecycle: [''],
@@ -979,7 +979,7 @@ export class ChecklistWrapperComponent {
                 country: [''],
                 siteNumber: [''],
                 patientNumber: [''],
-                comments: ''
+                comments: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
               }
             ]
           }
@@ -1018,7 +1018,7 @@ export class ChecklistWrapperComponent {
                     country: [''],
                     siteNumber: [''],
                     patientNumber: [''],
-                    comments: ''
+                    comments: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
                   },
                 ],
               }
@@ -1039,7 +1039,7 @@ export class ChecklistWrapperComponent {
                 country: [''],
                 siteNumber: [''],
                 patientNumber: [''],
-                comments: ''
+                comments: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
               },
 
               {
@@ -1048,7 +1048,7 @@ export class ChecklistWrapperComponent {
                 title: 'test2',
                 workflow: [''],
                 description: '',
-                assignee: [''],
+                assignee: ['Donald Trump', 'Mike Pence'],
                 dueDate: '',
                 qcCheck: ['Passed'],
                 lifecycle: [''],
@@ -1056,7 +1056,7 @@ export class ChecklistWrapperComponent {
                 country: [''],
                 siteNumber: [''],
                 patientNumber: [''],
-                comments: ''
+                comments: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
               }
             ]
           }
@@ -1087,7 +1087,7 @@ export class ChecklistWrapperComponent {
                     title: 'test',
                     workflow: [''],
                     description: '',
-                    assignee: [''],
+                    assignee: ['Donald Trump', 'Mike Pence'],
                     dueDate: '',
                     qcCheck: ['Passed'],
                     lifecycle: [''],
@@ -1095,7 +1095,7 @@ export class ChecklistWrapperComponent {
                     country: [''],
                     siteNumber: [''],
                     patientNumber: [''],
-                    comments: ''
+                    comments: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
                   },
                 ],
               }
@@ -1108,7 +1108,7 @@ export class ChecklistWrapperComponent {
                 title: 'test',
                 workflow: [''],
                 description: '',
-                assignee: [''],
+                assignee: ['Joe Exotic', 'Carole Baskins'],
                 dueDate: '',
                 qcCheck: ['Passed'],
                 lifecycle: [''],
@@ -1116,7 +1116,7 @@ export class ChecklistWrapperComponent {
                 country: [''],
                 siteNumber: [''],
                 patientNumber: [''],
-                comments: ''
+                comments: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
               },
 
               {
@@ -1125,7 +1125,7 @@ export class ChecklistWrapperComponent {
                 title: 'test2',
                 workflow: [''],
                 description: '',
-                assignee: [''],
+                assignee: ['Donald Trump', 'Mike Pence'],
                 dueDate: '',
                 qcCheck: ['Passed'],
                 lifecycle: [''],
@@ -1133,7 +1133,7 @@ export class ChecklistWrapperComponent {
                 country: [''],
                 siteNumber: [''],
                 patientNumber: [''],
-                comments: ''
+                comments: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
               }
             ]
           }
@@ -1180,6 +1180,7 @@ export class ChecklistWrapperComponent {
     this.assignee = node.assignee;
     this.dueDate = node.dueDate;
     this.qcCheck = node.qcCheck;
+    this.lifecycle = node.lifecycle;
     this.milestone = node.milestone;
     this.country = node.country;
     this.siteNumber = node.siteNumber;
