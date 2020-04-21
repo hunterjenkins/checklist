@@ -56,12 +56,14 @@ export class ChecklistWrapperComponent {
   patientNumber: string[];
   comments: string;
 
+  test: string;
+
   selectedLineItem: LineItemNode;
 
   constructor() {
     this.nestedTreeControl = new NestedTreeControl<SectionNode>(this.getSectionChildren);
     this.nestedDataSource = new MatTreeNestedDataSource();
-
+    this.test = "Brandon Rights";
     this.dataChange.subscribe(data => this.nestedDataSource.data = data);
 
     this.dataChange.next([

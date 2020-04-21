@@ -11,9 +11,14 @@
         <mat-tree-node *matTreeNodeDef="let node" style="display: block;">
           <li class="mat-tree-node" style="display: block ">
             <button mat-icon-button disabled></button>
-            <span class="material-icons">
-            {{node.icon}}
-            </span>
+
+            <div *ngIf="node.icon == 'folder'">
+              <img src="https://img.icons8.com/color/48/000000/folder-invoices.png" style="height: 20px;"/>
+            </div>
+
+            <div *ngIf="node.icon == 'assignment'">
+              <img src="https://img.icons8.com/cotton/64/000000/document-1.png" style="height: 20px;"/>
+            </div>
             {{ node.title }}
           </li>
 
@@ -21,9 +26,7 @@
             <li class="mat-tree-node" style="display: block; padding-left:22px;">
               <div *ngFor="let lineItem of node.childrenLineItems">
                 <button mat-button (click)="displayLineItem(lineItem)">
-                  <span class="material-icons" style="top: 0;">
-                  {{lineItem.icon}}
-                  </span>
+                    <img src="https://img.icons8.com/cotton/64/000000/document-1.png" style="height: 20px;"/>
                   {{lineItem.title}}
                 </button>
               </div>
@@ -40,7 +43,16 @@
                 <mat-icon class="mat-icon-rtl-mirror" style="top: 0px;">{{ nestedTreeControl.isExpanded(node) ? "expand_more" : "chevron_right" }} </mat-icon>
               </button>
 
-              <span class="material-icons" style="top: 0px;"> {{node.icon}}</span> {{ node.title }}
+              <!-- <span class="material-icons" style="top: 0px;"> {{node.icon}}</span>  -->
+
+
+              <div *ngIf="node.icon == 'folder'">
+                <img src="https://img.icons8.com/color/48/000000/folder-invoices.png" style="height: 20px;"/>
+              </div>
+
+
+
+              {{ node.title }}
 
             </div>
 
@@ -58,9 +70,7 @@
             <li class="mat-tree-node" style="display: block; padding-left:22px;">
               <div *ngFor="let lineItem of node.childrenLineItems">
                 <button (click)="displayLineItem(lineItem)" mat-button>
-                  <span class="material-icons" style="top: 0;">
-                  {{lineItem.icon}}
-                  </span>
+                    <img src="https://img.icons8.com/cotton/64/000000/document-1.png" style="height: 20px;"/>
                   {{lineItem.title}}
                 </button>
               </div>
@@ -96,10 +106,11 @@
             </div>
             <div class="col-md-10">
               <mat-form-field style="width: 100%;">
-                <mat-select>
-                  <mat-option *ngFor="let right of this.modifyRights" [value]="this.modifyRights[0]">
+                <mat-select [(value)]="test">
+                  <mat-option *ngFor="let right of this.modifyRights" value="Brandon Rights" >
                     {{right}}
                   </mat-option>
+
                 </mat-select>
               </mat-form-field>
             </div>
@@ -121,7 +132,7 @@
             </div>
             <div class="col-md-4">
               <mat-form-field style="width: 100%;">
-                <textarea matInput [value]="this.title"></textarea>
+                <textarea matInput rows="1" [value]="this.title"></textarea>
               </mat-form-field>
             </div>
             <div class="col-md-2 customLineItemLabel">
@@ -129,8 +140,8 @@
             </div>
             <div class="col-md-4">
               <mat-form-field style="width: 100%;">
-                <mat-select>
-                  <mat-option *ngFor="let workflow of this.workflow" [value]="this.workflow[0]">
+                <mat-select [(value)]="test">
+                  <mat-option *ngFor="let workflow of this.workflow" value="Brandon Rights">
                     {{workflow}}
                   </mat-option>
                 </mat-select>
@@ -157,8 +168,8 @@
             </div>
             <div class="col-md-4">
               <mat-form-field style="width: 100%;">
-                <mat-select>
-                  <mat-option *ngFor="let assign of this.assignee" [value]="this.assignee[0]">
+                <mat-select [(value)]="test">
+                  <mat-option *ngFor="let assign of this.assignee" value="Brandon Rights">
                     {{assign}}
                   </mat-option>
                 </mat-select>
@@ -184,8 +195,8 @@
             </div>
             <div class="col-md-4">
               <mat-form-field style="width: 100%;">
-                <mat-select>
-                  <mat-option *ngFor="let qc of this.qcCheck" [value]="this.assignee[0]">
+                <mat-select [(value)]="test">
+                  <mat-option *ngFor="let qc of this.qcCheck" value="Brandon Rights">
                     {{qc}}
                   </mat-option>
                 </mat-select>
@@ -196,8 +207,8 @@
             </div>
             <div class="col-md-4">
               <mat-form-field style="width: 100%;">
-                <mat-select>
-                  <mat-option *ngFor="let lc of this.lifecycle" [value]="this.assignee[0]">
+                <mat-select [(value)]="test">
+                  <mat-option *ngFor="let lc of this.lifecycle" value="Brandon Rights">
                     {{lc}}
                   </mat-option>
                 </mat-select>
@@ -226,8 +237,8 @@
                 </div>
                 <div class="col-md-8" >
                   <mat-form-field style="width: 100%;">
-                    <mat-select>
-                      <mat-option *ngFor="let ms of this.milestone" [value]="this.assignee[0]">
+                    <mat-select [(value)]="test">
+                      <mat-option *ngFor="let ms of this.milestone" value="Brandon Rights">
                         {{ms}}
                       </mat-option>
                     </mat-select>
@@ -240,8 +251,8 @@
                 </div>
                 <div class="col-md-8">
                   <mat-form-field style="width: 100%;">
-                    <mat-select>
-                      <mat-option *ngFor="let c of this.country" [value]="this.assignee[0]">
+                    <mat-select multiple >
+                      <mat-option *ngFor="let c of this.country" >
                         {{c}}
                       </mat-option>
                     </mat-select>
@@ -254,8 +265,8 @@
                 </div>
                 <div class="col-md-8">
                   <mat-form-field style="width: 100%;">
-                    <mat-select>
-                      <mat-option *ngFor="let sn of this.siteNumber" [value]="this.assignee[0]">
+                    <mat-select [(value)]="test">
+                      <mat-option *ngFor="let sn of this.siteNumber" value="Brandon Rights">
                         {{sn}}
                       </mat-option>
                     </mat-select>
@@ -268,8 +279,8 @@
                 </div>
                 <div class="col-md-8">
                   <mat-form-field style="width: 100%;">
-                    <mat-select>
-                      <mat-option *ngFor="let pn of this.patientNumber" [value]="this.assignee[0]">
+                    <mat-select [(value)]="test">
+                      <mat-option *ngFor="let pn of this.patientNumber" value="Brandon Rights">
                         {{pn}}
                       </mat-option>
                     </mat-select>
