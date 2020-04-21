@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/future-checklist",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

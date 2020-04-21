@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { NestedTreeControl } from '@angular/cdk/tree';
 import { MatTreeNestedDataSource } from '@angular/material/tree';
 import { BehaviorSubject } from 'rxjs';
@@ -37,9 +37,9 @@ export class SectionNode {
   templateUrl: './checklist-wrapper.component.html',
   styleUrls: ['./checklist-wrapper.component.css'],
 })
-export class ChecklistWrapperComponent {
+export class ChecklistWrapperComponent  {
 
-  nestedTreeControl: NestedTreeControl<SectionNode>;
+  treeControl: NestedTreeControl<SectionNode>;
   nestedDataSource: MatTreeNestedDataSource<SectionNode>;
   dataChange: BehaviorSubject<SectionNode[]> = new BehaviorSubject<SectionNode[]>([]);
   modifyRights: string[];
@@ -61,7 +61,7 @@ export class ChecklistWrapperComponent {
   selectedLineItem: LineItemNode;
 
   constructor() {
-    this.nestedTreeControl = new NestedTreeControl<SectionNode>(this.getSectionChildren);
+    this.treeControl = new NestedTreeControl<SectionNode>(this.getSectionChildren);
     this.nestedDataSource = new MatTreeNestedDataSource();
     this.test = "Brandon Rights";
     this.dataChange.subscribe(data => this.nestedDataSource.data = data);
@@ -1147,8 +1147,14 @@ export class ChecklistWrapperComponent {
     ]);
 
 
-
   }
+
+  @ViewChild('tree') tree;
+
+  ngAfterViewInit() {
+  this.tree.treeControl.expandAll();
+
+}
 
 
   public getSectionChildren( node: SectionNode){
