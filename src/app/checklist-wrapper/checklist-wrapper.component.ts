@@ -241,24 +241,7 @@ export class ChecklistWrapperComponent  {
             childrenLineItems: []
           }
         ],
-        childrenLineItems: [
-          {
-            icon: 'assignment',
-            modifyRights: ['Study Director', 'Study Facilitator'],
-            title: 'Trial Management Brochure 1a',
-            workflow: ['Workflow1', 'Workflow2', 'workflow3'],
-            description: 'The Trial Management Brochure document is a document that includes the instruction to the managers at each site for how the study will be managed by bhe PI',
-            assignee: ['Rob Carpenter', 'John Smith'],
-            dueDate: 'Yesterday',
-            qcCheck: ['Passed'],
-            lifecycle: ['Study 123-All Sites LC', 'Study 234- Select Sites LC'],
-            milestone: ['Study Start Up', 'Study Implement', 'Study Conclusion'],
-            country: ['USA', 'Canada', 'Mexico', 'Japan', 'Australia'],
-            siteNumber: ['1', '2', '3', '4'],
-            patientNumber: ['111', '112', '113', '114'],
-            comments: 'Trial Management Brochures for this study will be delivered to management site in person by the CRA'
-          }
-        ]
+        childrenLineItems: []
       },
 
       {
