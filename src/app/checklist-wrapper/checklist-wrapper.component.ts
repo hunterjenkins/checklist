@@ -157,6 +157,88 @@ export class ChecklistWrapperComponent  {
                 comments: 'The Trial Management Results 1B was conducted on patients with mild conditions related to treatment from the medicine 120-1b. These patients are to go undergo further trial of medicine 120-1a with variations. See 9.0 Third Parties sections for more information.'
               }
             ]
+          },
+          {
+            icon: "folder",
+            title: "1.2 Trial Team ",
+            type: "Section",
+            childrenSections: [
+              {
+                icon: "folder",
+                title: "1.2.1 Trial Team Details",
+                type: "Section",
+                childrenSections: [],
+                childrenLineItems:[
+                  {
+                    icon: 'assignment',
+                    modifyRights: ['Study Director', 'Study Facilitator'],
+                    title: 'Trial Team Details 1a',
+                    workflow: ['Workflow1', 'Workflow2', 'workflow3'],
+                    description: 'The Trial Team Details document is a document that includes the team at each site',
+                    assignee: ['Rob Carpenter', 'John Smith'],
+                    dueDate: 'Yesterday',
+                    qcCheck: ['Passed'],
+                    lifecycle: ['Study 123-All Sites LC', 'Study 234- Select Sites LC'],
+                    milestone: ['Study Start Up', 'Study Implement', 'Study Conclusion'],
+                    country: ['USA', 'Canada', 'Mexico', 'Japan', 'Australia'],
+                    siteNumber: ['1', '2', '3', '4'],
+                    patientNumber: ['111', '112', '113', '114'],
+                    comments: 'Trial Team CVs for this study will be delivered to management site in person by the CRA'
+                  },
+                  {
+                    icon: 'assignment',
+                    modifyRights: ['Study Director', 'Study Facilitator'],
+                    title: 'Trial Team CVs',
+                    workflow: ['Workflow1', 'Workflow2', 'workflow3'],
+                    description: 'The Trial Team CVs document is a document that includes the teams at each site',
+                    assignee: ['Rob Carpenter', 'John Smith'],
+                    dueDate: 'Yesterday',
+                    qcCheck: ['Passed'],
+                    lifecycle: ['Study 123-All Sites LC', 'Study 234- Select Sites LC'],
+                    milestone: ['Study Start Up', 'Study Implement', 'Study Conclusion'],
+                    country: ['USA', 'Canada', 'Mexico', 'Japan', 'Australia'],
+                    siteNumber: ['1', '2', '3', '4'],
+                    patientNumber: ['111', '112', '113', '114'],
+                    comments: 'Trial Team CVs for this study will be delivered to management site in person by the CRA'
+                  }
+                ],
+              }
+
+            ],
+            childrenLineItems: []
+          },
+          {
+            icon: "folder",
+            title: "1.3 Trial Committee",
+            type: "Section",
+            childrenSections: [
+              {
+                icon: "folder",
+                title: "1.3.1 Committee Process",
+                type: "Section",
+                childrenSections: [],
+                childrenLineItems:[
+                  {
+                    icon: 'assignment',
+                    modifyRights: ['Study Director', 'Study Facilitator'],
+                    title: 'Committee Process 1a',
+                    workflow: ['Workflow1', 'Workflow2', 'workflow3'],
+                    description: 'The Committee Process document is a document that includes the process at each site',
+                    assignee: ['Rob Carpenter', 'John Smith'],
+                    dueDate: 'Yesterday',
+                    qcCheck: ['Passed'],
+                    lifecycle: ['Study 123-All Sites LC', 'Study 234- Select Sites LC'],
+                    milestone: ['Study Start Up', 'Study Implement', 'Study Conclusion'],
+                    country: ['USA', 'Canada', 'Mexico', 'Japan', 'Australia'],
+                    siteNumber: ['1', '2', '3', '4'],
+                    patientNumber: ['111', '112', '113', '114'],
+                    comments: 'Committee Process for this study will be delivered to management site in person by the CRA'
+                  }
+                ],
+              }
+
+            ],
+            childrenLineItems: []
           }
         ],
         childrenLineItems: [
